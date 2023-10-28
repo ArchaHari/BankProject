@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/31f4942045.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url({% static 'bank-getty.jpg' %});background-repeat: no-repeat;background-size: 100% 800px;background-attachment: fixed;" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:40px;">
+    <div class="container-fluid" style="background-color:black;">
+        <i class="fa-solid fa-building-columns fa-2x" style="color:white"></i>
+        <b><a class="navbar-brand ms-3" href="#" style="color:white">YES BANK</a></b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/bankapp/register/" style="color:white;margin-left:750px;">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/bankapp/login/" style="color:white;">User Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/bankapp/adminlogin/" style="color:white;">Admin Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div style="width:500px;height:60px;margin-left:440px;margin-top:400px;color:black;background-color:grey;">
+        <h1>WELCOME TO YES BANK <i class="fa-solid fa-building-columns"></i></h1>
+    </div>
+</body>
+</html>

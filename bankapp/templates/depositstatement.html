@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script>
+        function myfunction(){
+           var body=document.getElementById('body').innerHTML;
+           var data=document.getElementById('data').innerHTML;
+           document.getElementById('body').innerHTML=data;
+           window.print()
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body" style="background-image:url({% static 'photo-1579621970795-87facc2f976d.jpg' %});background-repeat: no-repeat;background-size: 100% 800px;background-attachment: fixed;">
+<form method="post">{% csrf_token %}
+    <div id="data">
+    <h1 align="center" style="margin-top:220px;color:white;">Deposit Statement</h1>
+    <table align="center" border="2" style="margin-top:30px;">
+        <tr>
+            <th>Sl.No</th>
+            <th>Date</th>
+            <th>Deposit Amount</th>
+        </tr>
+        {% for i in a %}
+        {% if i.uid == id %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.amount}}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    </div>
+    <button onclick="myfunction()" style="margin-left:600px;">Print deposit statement</button>
+</form>
+</body>
+</html>
